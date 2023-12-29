@@ -72,10 +72,10 @@
               </div>
             </div>
             <template v-for="(img, id) in nowChoseProduct.imagesUrl" :key="id">
-              <img :src="img" alt="" class="images m-2" />
+              <img v-if="img" :src="img" alt="" class="images m-2" />
             </template>
           </template>
-          <p class="text-secondary">請選擇一個商品查看</p>
+          <p v-else class="text-secondary">請選擇一個商品查看</p>
         </div>
       </div>
     </div>
